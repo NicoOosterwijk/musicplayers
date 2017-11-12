@@ -2,4 +2,5 @@
 - name: Configure the musicplayers
   include_tasks:
     - ntp.yml
-    
+    - users.yml
+ 
