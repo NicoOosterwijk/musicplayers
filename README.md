@@ -20,17 +20,20 @@ Dependencies
 - motd from mrlesmithjr
 - sudoers from salamachinas
 
-Example Playbook
-----------------
+Main Playbook
+-------------
 
     - hosts: musicplayers
       roles:
-         - { role: username.rolename, x: 42 }
+        - common
+        - { role: 'mrlesmithjr.motd', tags: 'motd' }
+        - { role: 'juju4.adduser', tags: 'adduser'}
+        - { role: 'salamachinas.sudoers', tags: 'sudoers' }
 
 License
 -------
 
-BSD
+GPL
 
 Author Information
 ------------------
