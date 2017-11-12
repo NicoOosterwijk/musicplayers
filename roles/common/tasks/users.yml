@@ -12,5 +12,6 @@
     adduser_password: ansible
     adduser_sudoroot: false
     adduser_public_keys:
-      - nico.pub
+      - nico-hp.pub
+      - nico-thinkpad.pub
 
