@@ -3,4 +3,5 @@
   include_tasks:
     - ntp.yml
     - users.yml
+    - nopwlogon.yml
  
