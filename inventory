@@ -1,0 +1,12 @@
+[musicplayers]
+huiskamer  ansible_host=192.168.178.31 ansible_user=volumio
+demoruimte ansible_host=192.168.178.21 ansible_user=volumio
+badkamer   ansible_host=192.168.178.41 ansible_user=volumio
+#tuin       ansible_host=192.168.178.34 ansible_user=volumio
+
+[test]
+demoruimte ansible_host=192.168.178.21 ansible_user=volumio
+
+[beneden]
+demoruimte ansible_host=192.168.178.21 ansible_user=volumio
+#tuin       ansible_host=192.168.178.34 ansible_user=volumio
