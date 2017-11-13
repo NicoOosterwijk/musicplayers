@@ -1,9 +1,8 @@
 ---
 # this is the ntp playbook for all nodes
 
-
 - name: Install ntp
-  yum: name=ntp state=present
+  apt: name=ntp state=present
   tags: ntp
 
 - name: Configure ntp file
@@ -12,6 +11,6 @@
   notify: restart ntp
 
 - name: Start the ntp service
-  service: name=ntpd state=started enabled=yes
+  service: name=ntp state=started enabled=yes
   tags: ntp
 

@@ -1,7 +1,21 @@
 ---
-- name: Configure the musicplayers
-  include_tasks:
-    - ntp.yml
-    - users.yml
-    - nopwlogon.yml
- 
+- name: Configure the MusicPlayers
+  template:
+    src: motd.j2
+    dest: /etc/motd
+    owner: volumio
+    group: volumio
+    mode: 0644
+- include_tasks: ntp.yml
+- include_tasks: nopwlogon.yml
+- include_tasks: cron.yml
+- include_tasks: additional_services.yml
+- name: Add ssmtp-configuration from template
+  become: yes
+  template:
+    src: ssmtp.conf.j2
+    dest: /etc/ssmtp/ssmtp.conf
+    owner: root
+    group: root
+    mode: 0644
+

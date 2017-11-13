@@ -1,0 +1,15 @@
+---
+# this is the cron playbook for all nodes
+
+- name: Install mailutils
+  apt: name=mailutils state=present
+  tags: mailutils
+
+- name: Install ssmtp
+  apt: name=ssmtp state=present
+  tags: ssmtp
+
+- name: Install bzip2
+  apt: name=bzip2 state=present
+  tags: bzip2
+

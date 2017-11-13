@@ -1,0 +1,5 @@
+---
+- hosts: musicplayers
+  gather_facts: True
+  roles:
+    - common

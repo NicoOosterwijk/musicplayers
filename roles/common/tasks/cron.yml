@@ -1,0 +1,12 @@
+---
+# this is the cron playbook for all nodes
+
+- name: Install cron
+  apt: name=cron state=present
+  tags: cron
+
+- name: Start the cron service
+  service: name=cron state=started enabled=yes
+  tags: cron
+
+
