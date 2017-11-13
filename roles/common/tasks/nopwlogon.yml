@@ -1,0 +1,7 @@
+---
+- name: Restrict ssh logon to authorized keys
+  lineinfile: path='/etc/ssh/sshd_config'
+              insertafter='^UsePAM yes'
+              line='PasswordAuthentication no'
+              state=present
+
