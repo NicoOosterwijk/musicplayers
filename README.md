@@ -11,12 +11,12 @@ Volumio 2.x should be fully installed
 Role Variables
 --------------
 
-common:
+common: (default/main.yml)
 -------
 - mail_to: should be a valid e-mail address, default to "noosterwijk@hotmail.com" 
 - mail_from: should be a valid mail-account from your mail-server. Default to: "nico.oosterwijk@ziggo.nl"
 
-juju4.adduser:
+juju4.adduser: (default/main.yml)
 --------------
 - adduser_user_name: username
 - adduser_user_home: '/home/homedir'
