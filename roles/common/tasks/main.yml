@@ -30,7 +30,7 @@
     owner: volumio
     group: volumio
     mode: 0644
-- name: Define the mailIP script files from tepmplate
+- name: Define the mailIP script files from template
   template:
     src: mailIP.sh.j2
     dest: /home/volumio/mailIP.sh
