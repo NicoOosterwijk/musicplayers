@@ -1,0 +1,20 @@
+---
+- name: define the stylesheet
+  find:
+    paths: "/volumio/http/www/styles/"
+    patterns: "*.css"
+  register: files
+  #debug: var=files
+  tags: css
+
+- name: replace color1 in stylesheet
+  replace: dest={{item.path}} replace="{{stylesheet_digitalhifi_color}}" regexp="{{stylesheet_volumio_color1}}"
+  with_items: "{{ files.files }}"
+  tags: css
+
+- name: replace color2 in stylesheets
+  replace: dest={{item.path}} replace="{{stylesheet_digitalhifi_color}}" regexp="{{stylesheet_volumio_color2}}"
+  with_items: "{{ files.files }}"
+  tags: css
+
+

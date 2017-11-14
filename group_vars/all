@@ -5,3 +5,10 @@ ntpserver0: 0.nl.pool.ntp.org
 ntpserver1: 1.nl.pool.ntp.org
 ntpserver2: 2.nl.pool.ntp.org
 ntpserver3: 3.nl.pool.ntp.org
+
+stylesheet_digitalhifi_color: "#136F9A"
+stylesheet_volumio_color1: "#54c698"
+stylesheet_volumio_color2: "#3c763d"
+
+ssmtp_mail_to: "noosterwijk@hotmail.com"
+ssmtp_mail_from: "nico.oosterwijk@ziggo.nl"
