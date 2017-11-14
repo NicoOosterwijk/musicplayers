@@ -1,0 +1,16 @@
+---
+- name: Replace Volumio logo by DigitalHifi logo
+  file:
+    src: volumio-logo.png
+    dest: /home/volumio/musicplayer_2.0/volumio/http/www/app/themes/volumio/assets/variants/volumio/graphics/volumio-logo.png
+    owner: volumio
+    group: volumio
+    mode: 0644
+  file:
+    src: volumio-logo.png
+    dest: /home/volumio/musicplayer_2.0/volumio/http/www/app/themes/volumio/assets/graphics/volumio-logo.png
+    owner: volumio
+    group: volumio
+    mode: 0644
+
+
