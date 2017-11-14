@@ -17,8 +17,6 @@ Dependencies
 ------------
 
 - adduser from juju4
-- motd from mrlesmithjr
-- sudoers from salamachinas
 
 Main Playbook
 -------------
