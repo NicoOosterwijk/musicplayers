@@ -40,6 +40,7 @@ Main Playbook
       roles:
         - common
         - { role: juju4.adduser, tags: 'adduser'}
+        - volumio
 
 License
 -------
