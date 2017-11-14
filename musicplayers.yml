@@ -3,4 +3,4 @@
   gather_facts: True
   roles:
     - common
-    - juju4.adduser
+    - { role: juju4.adduser }

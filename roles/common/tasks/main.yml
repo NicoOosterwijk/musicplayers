@@ -1,15 +1,20 @@
 ---
-- name: Configure the MusicPlayers
+- name: Install and start the NTP services
+  include_tasks: ntp.yml
+- name: Prevent ssh login without key-pair
+  include_tasks: nopwlogon.yml
+- name: Install and start the cron service
+  include_tasks: cron.yml
+- name: Add additional services
+  include_tasks: additional_services.yml
+
+- name: Install motd from template
   template:
     src: motd.j2
     dest: /etc/motd
     owner: volumio
     group: volumio
     mode: 0644
-- include_tasks: ntp.yml
-- include_tasks: nopwlogon.yml
-- include_tasks: cron.yml
-- include_tasks: additional_services.yml
 - name: Add ssmtp-configuration from template
   become: yes
   template:
@@ -18,17 +23,17 @@
     owner: root
     group: root
     mode: 0644
-- name: Define the mail template files
+- name: Define the mail files from templates
   template:
     src: mail.txt.j2
-    dest: /home.volumio/mail.txt
+    dest: /home/volumio/mail.txt
     owner: volumio
     group: volumio
     mode: 0644
-- name: Define the mailIP script files
+- name: Define the mailIP script files from tepmplate
   template:
     src: mailIP.sh.j2
-    dest: /home.volumio/mailIP.sh
+    dest: /home/volumio/mailIP.sh
     owner: volumio
     group: volumio
     mode: 0755

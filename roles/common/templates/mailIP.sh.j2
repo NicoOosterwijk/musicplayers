@@ -15,4 +15,4 @@ if [[ "$IP2" ]]; then
   echo "Het wifi IP adres van $HN is $IP2" >> /home/volumio/newmail.txt
 fi
 
-ssmtp {{mail_to }} < /home/volumio/newmail.txt
+ssmtp {{mail_to|default('noosterwijk@hotmail.com') }} < /home/volumio/newmail.txt

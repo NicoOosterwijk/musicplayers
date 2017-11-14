@@ -26,9 +26,7 @@ Main Playbook
     - hosts: musicplayers
       roles:
         - common
-        - { role: 'mrlesmithjr.motd', tags: 'motd' }
         - { role: 'juju4.adduser', tags: 'adduser'}
-        - { role: 'salamachinas.sudoers', tags: 'sudoers' }
 
 License
 -------
