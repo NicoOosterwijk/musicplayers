@@ -2,7 +2,6 @@
 - hosts: musicplayers
   gather_facts: True
   roles:
-    - common
-    - { role: juju4.adduser, tags: 'adduser' }
-    - volumio
+    - { role: common, tags: 'common' }
+    - { role: volumio, tags: 'volumio' } 
 

@@ -5,6 +5,10 @@
   apt: name=ntp state=present
   tags: ntp
 
+- name: set timezone to Europe/Amsterdam
+  command: timedatectl set-timezone Europe/Amsterdam
+  tags: ntp
+
 - name: Configure ntp file
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
   tags: ntp

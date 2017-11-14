@@ -19,6 +19,7 @@
     group: volumio
     mode: 0644
   tags: motd
+
 - name: Add ssmtp-configuration from template
   become: yes
   template:
@@ -60,4 +61,14 @@
     owner: volumio
     group: volumio
     mode: 0755
-  
+  tags: ssmtp,mail
+- name: Add mail-me-the-IP-address to startup of the system
+  become: yes
+  lineinfile:
+    path: "/etc/rc.local"
+    regexp: "mailIP"
+    insertbefore: "^exit 0"
+    line: "/bin/sleep 20;/home/volumio/mailIP.sh\n"
+    state: present
+  tags: ssmtp,mail
+
