@@ -36,6 +36,7 @@ Main Playbook
 
 common will do the following:
 - install and start ntp service
+- set timezone to Europe/Amsterdam
 - install and start cron service
 - prevent ssh login without key-pair
 - install ssmtp, mailutils and bzip2
