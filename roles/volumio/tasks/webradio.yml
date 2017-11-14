@@ -1,0 +1,9 @@
+---
+- name: Add my Favourite Webradio Stations
+  template:
+    src: my-web-radio.j2
+    dest: /data/favourites/my-web-radio
+    owner: volumio
+    group: volumio
+    mode: 0644
+

@@ -1,21 +1,35 @@
 ---
-- name: Replace Volumio logo by DigitalHifi logo
-  file:
-    src: volumio-logo.png
-    dest: /home/volumio/musicplayer_2.0/volumio/http/www/app/themes/volumio/assets/variants/volumio/graphics/volumio-logo.png
-    owner: volumio
-    group: volumio
-    mode: 0644
-    tags: logo
+- name: Replace Volumio logo in assets/variants/volumio/
+  stat: path=/volumio/http/www/app/themes/volumio/assets/variants/volumio/graphics/volumio-logo.png
+  register: variants_path
+  tags: logo
 - file:
     src: volumio-logo.png
-    dest: /home/volumio/musicplayer_2.0/volumio/http/www/app/themes/volumio/assets/graphics/volumio-logo.png
+    dest: /volumio/http/www/app/themes/volumio/assets/variants/volumio/graphics/volumio-logo.png
     owner: volumio
     group: volumio
     mode: 0644
-    tags: logo
+  when: variants_path.stat.exists == True
+  tags: logo
+
+- name: Replace volumio logo in assets
+  stat: path=/volumio/http/www/app/themes/volumio/assets/graphics/volumio-logo.png
+  register: assets_path
+  tags: logo
+- file:
+    src: volumio-logo.png
+    dest: /volumio/http/www/app/themes/volumio/assets/graphics/volumio-logo.png
+    owner: volumio
+    group: volumio
+    mode: 0644
+  when: assets_path.stat.exists == True
+  tags: logo
 
 - name: Changing the values in the stylesheet(s)
   include_tasks: stylesheet.yml
   tags: css
+
+- name: Add web-radio station to favourites
+  include_tasks: webradio.yml
+  tags: radio
 
