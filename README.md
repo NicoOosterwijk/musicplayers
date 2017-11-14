@@ -26,7 +26,7 @@ Main Playbook
     - hosts: musicplayers
       roles:
         - common
-        - { role: 'juju4.adduser', tags: 'adduser'}
+        - { role: juju4.adduser, tags: 'adduser'}
 
 License
 -------
