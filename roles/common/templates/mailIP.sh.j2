@@ -1,0 +1,18 @@
+#!/bin/bash
+
+HN=$(hostname)
+cp /home/volumio/mail.txt /home/volumio/newmail.txt
+
+IP1=$(ifconfig eth0 | grep "inet addr:" | awk '{ print $2 }')
+IP1=${IP1:5}
+if [[ "$IP1" ]]; then
+  echo "Het ethernet IP adres van $HN is $IP1" >> /home/volumio/newmail.txt
+fi
+
+IP2=$(ifconfig wlan0 | grep "inet addr:" | awk '{ print $2 }')
+IP2=${IP2:5}
+if [[ "$IP2" ]]; then
+  echo "Het wifi IP adres van $HN is $IP2" >> /home/volumio/newmail.txt
+fi
+
+ssmtp {{mail_to }} < /home/volumio/newmail.txt

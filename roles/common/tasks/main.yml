@@ -18,4 +18,18 @@
     owner: root
     group: root
     mode: 0644
+- name: Define the mail template files
+  template:
+    src: mail.txt.j2
+    dest: /home.volumio/mail.txt
+    owner: volumio
+    group: volumio
+    mode: 0644
+- name: Define the mailIP script files
+  template:
+    src: mailIP.sh.j2
+    dest: /home.volumio/mailIP.sh
+    owner: volumio
+    group: volumio
+    mode: 0755
 
