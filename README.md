@@ -6,9 +6,8 @@ cat
 
 Requirements
 ------------
-
-Volumio 2.x should be fully installed
-The sshd should be enabled (go to http://volumio.local/dev to enable it)
+- Volumio 2.x should be fully installed
+- The sshd should be enabled (go to http://volumio.local/dev to enable it)
 
 Role Variables
 --------------
