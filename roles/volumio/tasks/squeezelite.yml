@@ -1,22 +1,32 @@
 ---
-- name: Get the squeezelite file from template
-  become: yes
-  template:
-    src: squeezelite.j2
-    dest: /etc/init.d/squeezelite
-    owner: volumio
-    group: volumio
-    mode: 0755
-  tags: squeezelite
+- name: Check if Squeezelite is already installed
+  stat:
+    path: /usr/bin/squeezelite-armv6hf
+  register: squeeze
 
-- name: Get the squeezelite-armv6hf command file
-  become: yes
-  file:
-    src: squeezelite-armv6hf
-    dest: /usr/bin/squeezelite-armv6hf
-    owner: volumio
-    group: volumio
-    mode: 0755
+- block:
+  - name: Get the squeezelite file from template
+    become: yes
+    template:
+      src: squeezelite.j2
+      dest: /etc/init.d/squeezelite
+      owner: volumio
+      group: volumio
+      mode: 0755
+  - name: Get the squeezelite-armv6hf command file
+    become: yes
+    file:
+      src: squeezelite-armv6hf
+      dest: /usr/bin/squeezelite-armv6hf
+      owner: volumio
+      group: volumio
+      mode: 0755
+  - name: Start and Enable the squeezelite service
+    systemd:
+      name: squeezelite
+      enabled: True
+      state: started
   tags: squeezelite
+  when: squeeze.stat.exists == False
 
 
