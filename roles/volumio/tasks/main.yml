@@ -33,3 +33,7 @@
   include_tasks: webradio.yml
   tags: radio
 
+- name: Put a password on Airplay
+  include_tasks: airplayww.yml
+  tags: airplay
+

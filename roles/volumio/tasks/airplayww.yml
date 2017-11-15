@@ -2,8 +2,8 @@
 - name: Put a password on AirPlay
   lineinfile: path='/volumio/app/plugins/music_service/airplay_emulation/shairport-sync.conf.tmpl'
               regexp='password'
-              insertafter='^log_verbosity'
-              line='password = "wachtwoord"'
+              insertafter='log_verbosity = 0;'
+              line='    password = "wachtwoord"'
               state=present
   tags: airplay
   
