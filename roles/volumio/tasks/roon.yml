@@ -1,0 +1,31 @@
+---
+- block:
+  - name: get Roon software for ARMv7
+    get_url:
+      url: http://download.roonlabs.com/builds/roonbridge-installer-linuxarmv7hf.sh
+      dest: /home/volumio/
+  - name: set execution flag
+    file: 
+      path: /home/volumio/roonbridge-installer-linuxarmv7hf.sh
+      mode: 0755
+  - name: install roon software on ARMv7
+    become: yes
+    shell: 'echo Y | /home/volumio/roonbridge-installer-linuxarmv7hf.sh'
+  tags: roon
+  when: ansible_architecture == "armv7l"
+
+- block:
+  - name: get Roon software for ARMv8
+    get_url:
+      url: http://download.roonlabs.com/builds/roonbridge-installer-linuxarmv8hf.sh
+      dest: /home/volumio/
+  - name: set execution flag
+    file: 
+      path: /home/volumio/roonbridge-installer-linuxarmv8hf.sh
+      mode: 0755
+  - name: install roon software on ARMv8
+    become: yes
+    shell: 'echo Y | /home/volumio/roonbridge-installer-linuxarmv8hf.sh'
+  tags: roon
+  when: ansible_architecture == "armv8l"
+
