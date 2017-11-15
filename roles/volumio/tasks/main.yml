@@ -41,4 +41,7 @@
   include_tasks: roon.yml
   tags: roon
 
+- name: Install musicplayer as Squeezebox device
+  include_tasks: squeezelite.yml
+  tags: squeezelite
 
