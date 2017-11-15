@@ -1,8 +1,7 @@
 MusicPlayers
 ============
 
-Ansible will install the files required by Digital Hifi to publish its own styling to Volumio. It will also install additional services like ssmtp, cron and ntp.
-cat
+Ansible will install the files required by Digital Hifi to publish its own styling to Volumio. It will also install additional services like ssmtp, cron and ntp. De MusicPlayer will be setup as device for *SqueezeBox* Server (LMS) and as device for *Roon* Server.
 
 Requirements
 ------------
