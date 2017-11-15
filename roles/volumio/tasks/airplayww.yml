@@ -3,7 +3,7 @@
   lineinfile: path='/volumio/app/plugins/music_service/airplay_emulation/shairport-sync.conf.tmpl'
               regexp='password'
               insertafter='log_verbosity = 0;'
-              line='    password = "wachtwoord"'
+              line='    password = "{{ airplay_password }}"'
               state=present
   tags: airplay
   
