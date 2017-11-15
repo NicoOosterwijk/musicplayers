@@ -5,4 +5,5 @@
               insertafter='^log_verbosity'
               line='password = "wachtwoord"'
               state=present
-
+  tags: airplay
+  
