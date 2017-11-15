@@ -7,6 +7,7 @@ Requirements
 ------------
 - Volumio 2.x should be fully installed
 - The sshd should be enabled (go to http://volumio.local/dev to enable it)
+- Match the MusicPlayers IP addresses to the inventory file
 
 Role Variables
 --------------
