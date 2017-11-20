@@ -12,6 +12,7 @@
   include_tasks: additional_services.yml
 
 - name: Install motd from template
+  become: yes
   template:
     src: motd.j2
     dest: /etc/motd

@@ -1,7 +1,21 @@
 ---
 - name: Restrict ssh logon to authorized keys
+  become: yes
   lineinfile: path='/etc/ssh/sshd_config'
-              insertafter='^UsePAM yes'
               line='PasswordAuthentication no'
               state=present
+  notify: restart sshd
 
+- name: Set PAM=yes settings
+  become: yes
+  lineinfile: path='/etc/ssh/sshd_config'
+              line='UsePAM yes'
+              state=present
+  notify: restart sshd
+
+- name: Do not use PAM=no setting
+  become: yes
+  lineinfile: path='/etc/ssh/sshd_config'
+              line='UsePAM no'
+              state=absent
+  notify: restart sshd

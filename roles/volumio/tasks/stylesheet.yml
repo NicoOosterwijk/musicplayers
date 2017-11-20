@@ -22,3 +22,8 @@
   with_items: "{{ files.files }}"
   tags: css
 
+- name: replace color4 in stylesheets
+  replace: dest={{item.path}} replace="{{stylesheet_digitalhifi_color}}" regexp="{{stylesheet_volumio_color4}}"
+  with_items: "{{ files.files }}"
+  tags: css
+

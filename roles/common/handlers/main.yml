@@ -3,7 +3,12 @@
 # See http://docs.ansible.com/playbooks_intro.html for more information about handlers.
 
 - name: restart ntp
+  become: yes
   service: name=ntp state=restarted
 - name: restart cron
+  become: yes
   service: name=cron state=restarted
+- name: restart sshd
+  become: yes
+  service: name=sshd state=restarted
 

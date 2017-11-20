@@ -2,19 +2,22 @@
 # this is the ntp playbook for all nodes
 
 - name: Install ntp
+  become: yes
   apt: name=ntp state=present
   tags: ntp
 
 - name: set timezone to Europe/Amsterdam
-  command: timedatectl set-timezone Europe/Amsterdam
+  command: echo "TZ='Europe/Amsterdam'; export TZ" >> ~/.profile
   tags: ntp
 
 - name: Configure ntp file
+  become: yes
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
   tags: ntp
   notify: restart ntp
 
 - name: Start the ntp service
+  become: yes
   service: name=ntp state=started enabled=yes
   tags: ntp
 
