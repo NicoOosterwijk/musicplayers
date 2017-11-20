@@ -12,19 +12,19 @@ Requirements
 Role Variables
 --------------
 
-common: (group_vars)
+common: (defaults)
 -------
 - ntpserver: URI of the NL NTP server
 - mail_to: should be a valid e-mail address, default to "noosterwijk@hotmail.com" 
 - mail_from: should be a valid mail-account from your mail-server. Default to: "nico.oosterwijk@ziggo.nl"
+- squeezelite_server_address: server IP address for LMS
 
-volumio: (group_vars)
+volumio: (defaults)
 --------
 - radiostation_uri: the URI for the webradio stream
 - airplay_password: to be used as password for AirPlay service
 - stylesheet_digitalhifi_color: color to be used in stylesheet
 - stylesheet_volumio_color: default color of Volumio
-- squeezelite_server_address: server IP address for LMS
 
 
 Dependencies
@@ -49,13 +49,13 @@ common will do the following:
 - copy a new motd from template, using fqdn
 - copy a new ssmtp.conf from template using group_vars
 - copy some mail text files ans script files from templates using group_vars
+- set player as Roon device
+- set player as Squeezebox (LMS) device
 
 volumio will do the following:
 - replace the volumio logo for the web interface
 - change colours in the stylesheet to match Digital Hifi colours
 - add My Web Radiostations for NL
-- set player as Roon device
-- set player as Squeezebox (LMS) device
 - put a password on AirPlay
 
 License
