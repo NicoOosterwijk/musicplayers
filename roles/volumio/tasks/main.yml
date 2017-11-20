@@ -39,11 +39,3 @@
   include_tasks: airplayww.yml
   tags: airplay
 
-- name: Install musicplayer as Roon device
-  include_tasks: roon.yml
-  tags: roon
-
-- name: Install musicplayer as Squeezebox device
-  include_tasks: squeezelite.yml
-  tags: squeezelite
-

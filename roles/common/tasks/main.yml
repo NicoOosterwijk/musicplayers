@@ -73,3 +73,11 @@
     state: present
   tags: ssmtp,mail
 
+- name: Install Squeezelite
+  include_tasks: squeezelite.yml
+  tags: squeeze
+
+- name: Install Roon
+  include_tasks: roon.yml
+  tags: roon
+

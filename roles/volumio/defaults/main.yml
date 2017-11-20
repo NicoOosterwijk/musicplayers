@@ -1,18 +1,10 @@
 ---
-# Variables listed here are applicable to all host groups
-
-ntpserver0: 0.nl.pool.ntp.org
-ntpserver1: 1.nl.pool.ntp.org
-ntpserver2: 2.nl.pool.ntp.org
-ntpserver3: 3.nl.pool.ntp.org
+# Variables listed here are applicable to the volumio role
 
 stylesheet_digitalhifi_color: "#136F9A"
 stylesheet_volumio_color1: "#54c698"
 stylesheet_volumio_color2: "#3c763d"
 stylesheet_volumio_color3: "#54c688"
-
-ssmtp_mail_to: "noosterwijk@hotmail.com"
-ssmtp_mail_from: "nico.oosterwijk@ziggo.nl"
 
 JazzFM_uri: "http://tx.sharp-stream.com/icecast.php?i=jazzfmmobile.mp3"
 RadioM_uri: "http://icecast.omroep.nl/rtvutrecht-radio-m-bb-mp3"
@@ -39,8 +31,6 @@ SlamFM_uri: "http://vip-icecast.538.lw.triple-it.nl/SLAMFM_MP3.m3u"
 Sublime_uri: "http://stream.sublimefm.nl/SublimeFM_mp3.m3u"
 Bingo_uri: "http://icecast.omroep.nl/rtvutrecht-bingo-fm-bb-mp3"
 Radio2T2000_uri: "http://icecast.omroep.nl/radio2-top2000-mp3.m3u"
-
-squeezelite_server_address: 192.168.178.35
 
 airplay_password: "wachtwoord"
 

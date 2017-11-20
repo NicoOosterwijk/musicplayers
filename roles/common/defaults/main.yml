@@ -1,0 +1,15 @@
+---
+# Variables listed here are applicable to the common role
+
+ntpserver0: 0.nl.pool.ntp.org
+ntpserver1: 1.nl.pool.ntp.org
+ntpserver2: 2.nl.pool.ntp.org
+ntpserver3: 3.nl.pool.ntp.org
+
+ssmtp_mail_to: "noosterwijk@hotmail.com"
+ssmtp_mail_from: "nico.oosterwijk@ziggo.nl"
+
+squeezelite_server_address: 192.168.178.35
+
+airplay_password: "wachtwoord"
+
