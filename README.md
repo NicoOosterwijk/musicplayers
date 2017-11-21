@@ -55,6 +55,8 @@ common will do the following:
 volumio will do the following:
 - replace the volumio logo for the web interface
 - change colours in the stylesheet to match Digital Hifi colours
+- change the GUI title
+- replace the link to Volumio shop to Digital Hifi website
 - add My Web Radiostations for NL
 - put a password on AirPlay
 
