@@ -47,17 +47,17 @@ common will do the following:
 - prevent ssh login without key-pair
 - install ssmtp, mailutils and bzip2
 - copy a new motd from template, using fqdn
-- copy a new ssmtp.conf from template using group_vars
-- copy some mail text files ans script files from templates using group_vars
+- copy a new ssmtp.conf from template using variables
+- copy some mail text files ans script files from templates using variables
 - set player as Roon device
 - set player as Squeezebox (LMS) device
 
 volumio will do the following:
 - replace the volumio logo for the web interface
-- change colours in the stylesheet to match Digital Hifi colours
+- change colours in the stylesheet to match Digital Hifi colours (using variables)
 - change the GUI title
 - replace the link to Volumio shop to Digital Hifi website
-- add My Web Radiostations for NL
+- add My Web Radiostations for NL using variables
 - put a password on AirPlay
 
 License
