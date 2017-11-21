@@ -1,5 +1,5 @@
 ---
-# this is the cron playbook for all nodes
+# this is the additional_packages playbook for the common role
 
 - name: Install mailutils
   become: yes
@@ -15,4 +15,9 @@
   become: yes
   apt: name=bzip2 state=present
   tags: bzip2
+
+- name: Install vim
+  become: yes
+  apt: name=vim state=present
+  tags: vim
 

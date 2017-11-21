@@ -3,10 +3,10 @@
   stat: path=/volumio/http/www/app/themes/volumio/assets/variants/volumio/graphics/volumio-logo.png
   register: variants_path
   tags: logo
-- file:
+- name: replace the logo in assets/variants/volumio/graphics
+  copy:
     src: volumio-logo.png
     dest: /volumio/http/www/app/themes/volumio/assets/variants/volumio/graphics/volumio-logo.png
-    state: file
     owner: volumio
     group: volumio
     mode: 0644
@@ -17,15 +17,55 @@
   stat: path=/volumio/http/www/app/themes/volumio/assets/graphics/volumio-logo.png
   register: assets_path
   tags: logo
-- file:
+- name: replace the logo in assets/graphics
+  copy:
     src: volumio-logo.png
     dest: /volumio/http/www/app/themes/volumio/assets/graphics/volumio-logo.png
-    state: file
     owner: volumio
     group: volumio
     mode: 0644
   when: assets_path.stat.exists == True
   tags: logo
+
+- name: Remove original title
+  lineinfile: 
+     path: '/volumio/http/www/app/themes/volumio/assets/variants/volumio/volumio-settings.json'
+     regexp: '  "pageTitle": "Volumio - Audiophile Music Player",'
+     state: absent
+  tags: title
+
+- name: Adding a new title to the app
+  lineinfile: 
+     path: '/volumio/http/www/app/themes/volumio/assets/variants/volumio/volumio-settings.json'
+     line: '  "pageTitle": "MusicPlayer - Audiophile Music Player",'
+     insertafter: '"app": "Volumio",'
+  tags: title
+
+- name: define the index page
+  find:
+    paths: "/volumio/http/www/"
+    patterns: "index.html"
+  register: index
+  tags: title
+
+- name: Change title in index.html
+  replace: dest={{ item.path }} replace="MusicPlayer -" regexp="Volumio -"
+  with_items: "{{ index.files }}"
+  tags: title
+
+- name: Remove shopping link from menu
+  lineinfile:
+    path: '/volumio/app/mainmenu.json'
+    regexp: '{"id": "link", "name": "Volumio Shop", "params": {"url": "https://volumio.org/shop/"}}'
+    state: absent
+  tags: link
+
+- name: Add Digital Hifi link to menu
+  lineinfile:
+    path: '/volumio/app/mainmenu.json'
+    line: '    {"id": "link", "name": "Digital Hifi", "params": {"url": "http://www.digitalhifi.nl"}}'
+    insertbefore: "]"
+  tags: link
 
 - name: Changing the values in the stylesheet(s)
   include_tasks: stylesheet.yml

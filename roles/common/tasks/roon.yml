@@ -1,4 +1,9 @@
 ---
+- name: Check if Roon is already installed
+  stat:
+    path: /opt/RoonBridge/VERSION
+  register: Roon
+
 - block:
   - name: get Roon software for ARMv7
     get_url:
@@ -12,7 +17,7 @@
     become: yes
     shell: 'echo Y | /home/volumio/roonbridge-installer-linuxarmv7hf.sh'
   tags: roon
-  when: ansible_architecture == "armv7l"
+  when: ansible_architecture == "armv7l" and Roon.stat.exists == False
 
 - block:
   - name: get Roon software for ARMv8
@@ -27,5 +32,5 @@
     become: yes
     shell: 'echo Y | /home/volumio/roonbridge-installer-linuxarmv8hf.sh'
   tags: roon
-  when: ansible_architecture == "armv8l"
+  when: ansible_architecture == "armv8l" and Roon.stat.exists == False
 

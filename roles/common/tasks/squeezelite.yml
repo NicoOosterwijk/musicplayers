@@ -15,13 +15,14 @@
       mode: 0755
   - name: Get the squeezelite-armv6hf command file
     become: yes
-    file:
+    copy:
       src: squeezelite-armv6hf
       dest: /usr/bin/squeezelite-armv6hf
       owner: volumio
       group: volumio
       mode: 0755
   - name: Start and Enable the squeezelite service
+    become: yes
     systemd:
       name: squeezelite
       enabled: True

@@ -5,6 +5,8 @@ stylesheet_digitalhifi_color: "#136F9A"
 stylesheet_volumio_color1: "#54c698"
 stylesheet_volumio_color2: "#3c763d"
 stylesheet_volumio_color3: "#54c688"
+stylesheet_volumio_color4: "#339a62"
+stylesheet_volumio_color5: "#3aad6e"
 
 JazzFM_uri: "http://tx.sharp-stream.com/icecast.php?i=jazzfmmobile.mp3"
 RadioM_uri: "http://icecast.omroep.nl/rtvutrecht-radio-m-bb-mp3"

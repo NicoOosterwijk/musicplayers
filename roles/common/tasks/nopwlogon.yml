@@ -1,10 +1,11 @@
 ---
-- name: Restrict ssh logon to authorized keys
+- name: Restrict ssh logon to authorized keys (sshd)
   become: yes
   lineinfile: path='/etc/ssh/sshd_config'
               line='PasswordAuthentication no'
               state=present
   notify: restart sshd
+  tags: ssh
 
 - name: Set PAM=yes settings
   become: yes
@@ -12,6 +13,7 @@
               line='UsePAM yes'
               state=present
   notify: restart sshd
+  tags: ssh
 
 - name: Do not use PAM=no setting
   become: yes
@@ -19,3 +21,32 @@
               line='UsePAM no'
               state=absent
   notify: restart sshd
+  tags: ssh
+
+- name: Restrict ssh logon to authorized keys (ssh)
+  become: yes
+  lineinfile: path='/etc/ssh/ssh_config'
+              line='PasswordAuthentication no'
+              state=present
+  notify: restart sshd
+  tags: ssh
+
+- name: Make sure there is a .ssh directory
+  file:
+    path: /home/volumio/.ssh/
+    state: directory
+    owner: volumio
+    group: volumio
+    mode: 0700
+  tags: ssh
+
+- name: Copy authorized_keys to .ssh
+  copy:
+    src: authorized_keys
+    dest: /home/volumio/.ssh/authorized_keys
+    owner: volumio
+    group: volumio
+    mode: 0600
+  tags: ssh
+
+

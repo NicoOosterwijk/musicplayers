@@ -8,10 +8,10 @@
 - name: Install and start the cron service
   include_tasks: cron.yml
   tags: cron
-- name: Add additional services
-  include_tasks: additional_services.yml
+- name: Add additional packages
+  include_tasks: additional_packages.yml
 
-- name: Install motd from template
+- name: Copy motd from template
   become: yes
   template:
     src: motd.j2
@@ -80,4 +80,5 @@
 - name: Install Roon
   include_tasks: roon.yml
   tags: roon
+
 
