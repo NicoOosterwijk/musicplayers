@@ -27,6 +27,24 @@
   when: assets_path.stat.exists == True
   tags: logo
 
+- name: replace the default albumart (jpg)
+  copy:
+    src: default4.jpg
+    dest: /volumio/app/plugins/miscellanea/albumart/default.jpg
+    owner: volumio
+    group: volumio
+    mode: 0644
+  tags: logo
+
+- name: replace the default albumart (png)
+  copy:
+    src: default4.png
+    dest: /volumio/app/plugins/miscellanea/albumart/default.png
+    owner: volumio
+    group: volumio
+    mode: 0644
+  tags: logo
+
 - name: Remove original title
   lineinfile: 
      path: '/volumio/http/www/app/themes/volumio/assets/variants/volumio/volumio-settings.json'
