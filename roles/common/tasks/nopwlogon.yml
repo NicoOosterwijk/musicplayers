@@ -1,5 +1,5 @@
 ---
-- name: Restrict ssh logon to authorized keys (sshd)
+- name: Restrict ssh logon to authorized keys PasswordAuth)
   become: yes
   lineinfile: path='/etc/ssh/sshd_config'
               line='PasswordAuthentication no'
@@ -7,26 +7,26 @@
   notify: restart sshd
   tags: ssh
 
-- name: Set PAM=yes settings
-  become: yes
-  lineinfile: path='/etc/ssh/sshd_config'
-              line='UsePAM yes'
-              state=present
-  notify: restart sshd
-  tags: ssh
-
-- name: Do not use PAM=no setting
+- name: Set PAM=no settings
   become: yes
   lineinfile: path='/etc/ssh/sshd_config'
               line='UsePAM no'
-              state=absent
+              state=present
   notify: restart sshd
   tags: ssh
 
-- name: Restrict ssh logon to authorized keys (ssh)
+#- name: Do not use PAM=yes setting
+#  become: yes
+#  lineinfile: path='/etc/ssh/sshd_config'
+#              line='UsePAM yes'
+#              state=absent
+#  notify: restart sshd
+#  tags: ssh
+
+- name: Restrict ssh logon to authorized keys (ChallengeRespAuth)
   become: yes
-  lineinfile: path='/etc/ssh/ssh_config'
-              line='PasswordAuthentication no'
+  lineinfile: path='/etc/ssh/sshd_config'
+              line='ChallengeResponseAuthentication no'
               state=present
   notify: restart sshd
   tags: ssh
