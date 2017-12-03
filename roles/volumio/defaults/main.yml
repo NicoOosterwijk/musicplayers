@@ -14,6 +14,7 @@ Radio10_uri: "http://playerservices.streamtheworld.com/api/livestream-redirect/R
 Radio3_uri: "http://icecast.omroep.nl/3fm-sb-mp3.m3u"
 Radio2_uri: "http://icecast.omroep.nl/radio2-bb-mp3.m3u"
 Radio4_uri: "http://icecast.omroep.nl/radio4-sb-mp3.m3u"
+Radio5_uri: “http://icecast.omroep.nl/radio-sb-mp3.m3u”
 Radio6_uri: "http://icecast.omroep.nl/radio6-sb-mp3.m3u"
 Arrow_uri: "http://www.arrow.nl/streams/Rock128kmp3.pls"
 BNR_uri: "http://icecast-bnr.cdp.triple-it.nl/bnr_mp3_96_06.m3u"
