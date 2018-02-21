@@ -24,6 +24,24 @@
   notify: restart sshd
   tags: ssh
 
+- name: Set PrintMotd yes settings
+  become: yes
+  lineinfile: path='/etc/ssh/sshd_config'
+              line='PrintMotd yes'
+              insertafter='^PrintMotd no'
+              state=present
+  notify: restart sshd
+  tags: ssh
+
+- name: Do not use PrintMotd
+  become: yes
+  lineinfile: path='/etc/ssh/sshd_config'
+              regexp='^PrintMotd no'
+              state=absent
+  notify: restart sshd
+  tags: ssh
+
+
 - name: Restrict ssh logon to authorized keys (ChallengeRespAuth)
   become: yes
   lineinfile: path='/etc/ssh/sshd_config'

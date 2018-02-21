@@ -1,5 +1,5 @@
 ---
-- hosts: musicplayers
+- hosts: all
   gather_facts: True
   roles:
     - { role: common, tags: 'common' }
