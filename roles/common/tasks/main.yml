@@ -30,6 +30,7 @@
     group: root
     mode: 0644
   tags: ssmtp
+
 - name: Define the mail files from templates
   template:
     src: mail.txt.j2
@@ -38,6 +39,7 @@
     group: volumio
     mode: 0644
   tags: ssmtp,mail
+
 - name: Define the mailIP script files from template
   template:
     src: mailIP.sh.j2
@@ -46,6 +48,7 @@
     group: volumio
     mode: 0755
   tags: ssmtp,mail
+
 - name: Define the ialogin mail file from template
   template:
     src: ialogin.txt.j2
@@ -54,6 +57,7 @@
     group: volumio
     mode: 0644
   tags: ssmtp,mail
+
 - name: Add script to mail an interactive login
   become: yes
   template:
@@ -63,6 +67,7 @@
     group: volumio
     mode: 0755
   tags: ssmtp,mail
+
 - name: Add mail-me-the-IP-address to startup of the system
   become: yes
   lineinfile:
@@ -72,6 +77,4 @@
     line: "/bin/sleep 20;/home/volumio/mailIP.sh\n"
     state: present
   tags: ssmtp,mail
-
-
 
