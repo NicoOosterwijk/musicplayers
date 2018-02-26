@@ -21,3 +21,7 @@
   apt: name=vim state=present
   tags: vim
 
+- name: Install nodejs
+  become: yes
+  apt: name=nodejs state=present
+  tags: nodejs
