@@ -35,5 +35,5 @@ Sublime_uri: "http://stream.sublimefm.nl/SublimeFM_mp3.m3u"
 Bingo_uri: "http://icecast.omroep.nl/rtvutrecht-bingo-fm-bb-mp3"
 Radio2T2000_uri: "http://icecast.omroep.nl/radio2-top2000-mp3.m3u"
 
-airplay_password: "wachtwoord"
+airplay_password: "your_password"
 
