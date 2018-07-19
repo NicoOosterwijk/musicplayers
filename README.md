@@ -1,13 +1,14 @@
 MusicPlayers
 ============
 
-Ansible will install the files required by Digital Hifi to publish its own styling to the Volumio GUI. It will also install additional services like ssmtp, cron and ntp. De MusicPlayer will be setup as device for *SqueezeBox* Server (LMS) and as device for *Roon* Server.
+Ansible will install the files required by Digital Hifi to publish its own styling to the Volumio GUI. It will also install additional services like ssmtp, cron and ntp. 
 
 Requirements
 ------------
 - Volumio 2.x should be fully installed
+- Install your plugins using the Volumio GUI prior to this playbook(s)
 - The sshd should be enabled (go to http://volumio.local/dev to enable it)
-- Match the MusicPlayers IP addresses to the inventory file
+- Match your MusicPlayers IP addresses to the inventory file!
 
 Role Variables
 --------------
