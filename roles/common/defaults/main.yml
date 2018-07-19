@@ -6,10 +6,8 @@ ntpserver1: 1.nl.pool.ntp.org
 ntpserver2: 2.nl.pool.ntp.org
 ntpserver3: 3.nl.pool.ntp.org
 
-ssmtp_mail_to: "noosterwijk@hotmail.com"
-ssmtp_mail_from: "nico.oosterwijk@ziggo.nl"
+ssmtp_mail_to: "YourEmail@hotmail.com"
+ssmtp_mail_from: "YourEmail@ziggo.nl"
 
-squeezelite_server_address: 192.168.178.35
-
-airplay_password: "wachtwoord"
+airplay_password: "your-password"
 
