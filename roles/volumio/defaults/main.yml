@@ -10,7 +10,7 @@ stylesheet_volumio_color5: "#3aad6e"
 
 JazzFM_uri: "http://tx.sharp-stream.com/icecast.php?i=jazzfmmobile.mp3"
 RadioM_uri: "http://icecast.omroep.nl/rtvutrecht-radio-m-bb-mp3"
-Radio10_uri: "http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3"
+Radio10_uri: "http://stream.radio10.nl/radio10"
 Radio3_uri: "http://icecast.omroep.nl/3fm-sb-mp3.m3u"
 Radio2_uri: "http://icecast.omroep.nl/radio2-bb-mp3.m3u"
 Radio4_uri: "http://icecast.omroep.nl/radio4-sb-mp3.m3u"
