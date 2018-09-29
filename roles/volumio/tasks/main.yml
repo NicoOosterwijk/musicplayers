@@ -59,17 +59,17 @@
      insertafter: '"app": "Volumio",'
   tags: title
 
-- name: define the index page
-  find:
-    paths: "/volumio/http/www/"
-    patterns: "index.html"
-  register: index
-  tags: title
+#- name: define the index page
+#  find:
+#    paths: "/volumio/http/www/"
+#    patterns: "index.html"
+#  register: index
+#  tags: title
 
-- name: Change title in index.html
-  replace: dest={{ item.path }} replace="MusicPlayer -" regexp="Volumio -"
-  with_items: "{{ index.files }}"
-  tags: title
+#- name: Change title in index.html
+#  replace: dest={{ item.path }} replace="MusicPlayer -" regexp="Volumio -"
+#  with_items: "{{ index.files }}"
+#  tags: title
 
 - name: Remove shopping link from menu
   lineinfile:
