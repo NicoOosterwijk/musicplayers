@@ -26,7 +26,7 @@ Radio1080_uri: "http://playerservices.streamtheworld.com/api/livestream-redirect
 Radio1060_uri: "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR18.mp3"
 Radio10DC_uri: "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR23.mp3"
 Radio10LS_uri: "http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR04.mp3"
-Radio538_uri: "http://vip-icecast.538.lw.triple-it.nl/RADIO538_MP3.m3u"
+Radio538_uri: "http://18973.live.streamtheworld.com/RADIO538.mp3"
 Veronica_uri: "http://provisioning.streamtheworld.com/pls/VERONICA.pls"
 VeronicaT1000_uri: "http://provisioning.streamtheworld.com/pls/TOP1000.pls"
 SkyRadio_uri: "http://provisioning.streamtheworld.com/pls/skyradio.pls"
