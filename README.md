@@ -1,7 +1,7 @@
 MusicPlayers
 ============
 
-Ansible will install the files required by Digital Hifi to publish its own styling to the Volumio GUI. It will also install additional services like ssmtp, cron and ntp. De MusicPlayer will be setup as device for *SqueezeBox* Server (LMS) and as device for *Roon* Server.
+Ansible will install the files required by Digital Hifi to publish its own styling to the Volumio GUI. It will also install additional services like ssmtp, cron and ntp. 
 
 Requirements
 ------------
@@ -15,9 +15,8 @@ Role Variables
 common: (defaults)
 -------
 - ntpserver: URI of the NL NTP server
-- mail_to: should be a valid e-mail address, default to "noosterwijk@hotmail.com" 
-- mail_from: should be a valid mail-account from your mail-server. Default to: "nico.oosterwijk@ziggo.nl"
-- squeezelite_server_address: server IP address for LMS
+- mail_to: should be a valid e-mail address, PLEASE UPDATE VARS in DEFAULTS! 
+- mail_from: should be a valid mail-account from your mail-server. PLEASE UPDATE VARS in DEFAULTS!
 
 volumio: (defaults)
 --------
@@ -49,8 +48,6 @@ common will do the following:
 - copy a new motd from template, using fqdn
 - copy a new ssmtp.conf from template using variables
 - copy some mail text files ans script files from templates using variables
-- set player as Roon device
-- set player as Squeezebox (LMS) device
 
 volumio will do the following:
 - replace the volumio logo for the web interface
