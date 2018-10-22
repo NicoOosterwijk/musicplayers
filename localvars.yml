@@ -1,6 +1,0 @@
----
-- name: print ansible_local
-  hosts: demoruimte
-  tasks:
-    - debug: var=ansible_local
-
