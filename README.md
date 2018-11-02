@@ -16,8 +16,8 @@ Role Variables
 common: (defaults)
 -------
 - ntpserver: URI of the NL NTP server
-- mail_to: should be a valid e-mail address, please set the proper variable in defaults 
-- mail_from: should be a valid mail-account from your mail-server. please set the proper variable in defaults
+- mail_to: should be a valid e-mail address, PLEASE UPDATE VARS in DEFAULTS! 
+- mail_from: should be a valid mail-account from your mail-server. PLEASE UPDATE VARS in DEFAULTS!
 
 volumio: (defaults)
 --------
