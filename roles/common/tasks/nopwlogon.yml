@@ -70,8 +70,8 @@
   tags: ssh
 
 - name: Copy authorized_keys to .ssh
-  copy:
-    src: authorized_keys
+  template:
+    src: authorized_keys.j2
     dest: /home/volumio/.ssh/authorized_keys
     owner: volumio
     group: volumio
