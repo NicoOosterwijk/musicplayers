@@ -3,6 +3,8 @@ MusicPlayers
 
 Ansible will install the files required by Digital Hifi to publish its own styling to the Volumio GUI. It will also install additional services like ssmtp, cron and ntp. 
 
+Please note that a Jenkins job will start autmatically when a git commit has been pushed to the GitLab server.
+
 Requirements
 ------------
 - Volumio 2.x should be fully installed
