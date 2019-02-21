@@ -1,6 +1,6 @@
 [musicplayers]
 huiskamer  ansible_host=192.168.178.31 ansible_user=volumio
-demoruimte ansible_host=192.168.178.21 ansible_user=volumio
+demoruimte ansible_host=192.168.178.21 ansible_user=volumio ansible_sudo_pass=Z3g1kn13t
 badkamer   ansible_host=192.168.178.41 ansible_user=volumio
 tuin       ansible_host=192.168.178.61 ansible_user=volumio
 volumio	   ansible_host=192.168.178.32 ansible_user=volumio
