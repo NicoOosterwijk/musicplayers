@@ -10,7 +10,7 @@ Requirements
 - Volumio 2.x should be fully installed
 - Install your plugins using the Volumio GUI prior to this playbook(s)
 - The sshd should be enabled (go to http://volumio.local/dev to enable it)
-- Match your MusicPlayers IP addresses to the inventory file!
+- Match your MusicPlayers IP addresses with the inventory file!
 
 Role Variables
 --------------
