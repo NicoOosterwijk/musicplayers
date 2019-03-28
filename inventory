@@ -1,9 +1,7 @@
 [musicplayers]
-huiskamer  ansible_host=192.168.178.31 ansible_user=volumio
-demoruimte ansible_host=192.168.178.21 ansible_user=volumio
-badkamer   ansible_host=192.168.178.41 ansible_user=volumio
-tuin       ansible_host=192.168.178.61 ansible_user=volumio
-volumio	   ansible_host=192.168.178.32 ansible_user=volumio
-##dac       ansible_host=192.168.10.232 ansible_user=volumio
-
-
+huiskamer    ansible_host=192.168.178.31 ansible_user=volumio
+demoruimte   ansible_host=192.168.178.21 ansible_user=volumio
+badkamer     ansible_host=192.168.178.41 ansible_user=volumio
+tuin         ansible_host=192.168.178.61 ansible_user=volumio
+musicplayer	 ansible_host=192.168.178.20 ansible_user=volumio
+##dac        ansible_host=192.168.10.232 ansible_user=volumio
