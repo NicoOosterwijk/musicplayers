@@ -63,7 +63,7 @@ volumio will do the following:
 To Execute:
 -----------
 ```sh
-$ ansible-playbook musicplayers.yml -l musicplayer -k -K
+$ ansible-playbook musicplayers.yml -k -K
 ```
 
 
