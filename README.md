@@ -60,6 +60,13 @@ volumio will do the following:
 - add My Web Radiostations for NL using variables
 - put a password on AirPlay
 
+To Execute:
+-----------
+```sh
+$ ansible-playbook musicplayers.yml -l musicplayer -k -K
+```
+
+
 License
 -------
 
