@@ -3,8 +3,6 @@ MusicPlayers
 
 Ansible will install the files required by Digital Hifi to publish its own styling to the Volumio GUI. It will also install additional services like ssmtp, cron and ntp. 
 
-Please note that a Jenkins job will start autmatically when a Git commit has been pushed to the GitLab server.
-
 Requirements
 ------------
 - Volumio 2.x should be fully installed
@@ -32,7 +30,7 @@ volumio: (defaults)
 Dependencies
 ------------
 
-A known public key must exist on the MusicPlayer to be altered. This public key must match the private key in your GitLab account.
+A known public key must exist on the MusicPlayer to be altered. This public key must match the private key in your Git account.
 
 Main Playbook
 -------------
