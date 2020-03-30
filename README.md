@@ -30,7 +30,7 @@ volumio: (defaults)
 Dependencies
 ------------
 
-A known public key must exist on the MusicPlayer to be altered. This public key must match the private key in your Git account.
+none
 
 Main Playbook
 -------------
