@@ -7,7 +7,7 @@
   tags: ntp
 
 - name: set timezone to Europe/Amsterdam
-  command: echo "TZ='Europe/Amsterdam'; export TZ" >> ~/.profile
+  command: echo "TZ='Europe/Amsterdam'; export TZ" >> /home/volumio/.profile
   tags: ntp
 
 - name: Configure ntp file
